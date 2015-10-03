@@ -1,1 +1,602 @@
 @import "../../node_modules/bootstrap/less/bootstrap.less";
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  padding: 5% 0 0 0;
+  color: #333333;
+
+  .logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    float: left;
+    font-style:italic;
+    font-weight:500;
+
+    a {
+      color:#333333;
+    }
+    a:hover {
+      text-decoration:none;
+    }
+  }
+  nav {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+
+    .tab {
+      width: 33%;
+      float: left;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+      }
+    }
+
+    a.tab {
+      color:#333;
+    }
+      a.tab:hover {
+      color: #256bd3;
+      text-decoration:none;}
+
+    a .work {
+      background: url("../images/work-computer.jpg") no-repeat 50% 0;
+    }
+    a:hover .work {
+      background: url("../images/work-computer.jpg") no-repeat 50% 100%;
+    }
+    a .contact {
+      background: url("../images/email-contact.jpg") no-repeat 50% 0;
+    }
+    a:hover .contact {
+      background: url("../images/email-contact.jpg") no-repeat 50% 100%;
+    }
+    a .experience {
+      background: url("../images/ribbon-experience.jpg") no-repeat 50% 0;
+    }
+    a:hover .experience {
+      background: url("../images/ribbon-experience.jpg") no-repeat 50% 100%;
+    }
+    a .process {
+      background: url("../images/light-process.jpg") no-repeat 50% 0;
+    }
+    a:hover .process {
+      background: url("../images/light-process.jpg") no-repeat 50% 100%;
+    }
+    .tab div {
+      height:60px;
+
+    }
+    li {
+      padding: 4% 0 2% 0;
+      list-type:none;
+      display:block;
+      text-align:center;
+      vertical-align:bottom;
+
+    }
+
+    }
+  }
+.hero {
+  width:100%;
+}
+
+.portfolio-holder {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  /* You can see the purpose of transition by resizing the window.	*/
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#filters {
+  margin:1%;
+  padding:0;
+  list-style:none;
+}
+
+#filters li {
+  float:left;
+}
+
+#filters li span {
+  display: block;
+  padding:5px 20px;
+  text-decoration:none;
+  color:#666;
+  cursor: pointer;
+}
+
+#filters li span.active {
+  background: #337ab7;
+  color:#fff;
+}
+
+
+#portfoliolist .portfolio {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  width:23%;
+  margin:1%;
+  display:none;
+  float:left;
+  overflow:hidden;
+}
+
+.portfolio-wrapper {
+  overflow:hidden;
+  position: relative !important;
+  background: #fff;
+  cursor:pointer;
+}
+
+.portfolio img {
+  max-width:100%;
+  position: relative;
+}
+
+//hide its label by default
+.portfolio .label {
+  position: absolute;
+  width: 100%;
+  height:40px;
+  bottom:-40px;
+}
+
+.portfolio .label-bg {
+  background: #337ab7;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.portfolio .label-text {
+  color:#fff;
+  position: relative;
+  z-index:500;
+  padding:5px 8px;
+}
+
+.portfolio .text-category {
+  display:block;
+  font-size:9px;
+}
+
+.label-text a {
+  color:#fff;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+footer {
+  border-top: solid 1px;
+  padding: 3% 0;
+  margin: 3% 0 0 0;
+}
+
+
+/*slick slider start*/
+
+/* Slider */
+.slick-slider
+{
+  position: relative;
+
+  display: block;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus
+{
+  outline: none;
+}
+.slick-list.dragging
+{
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-slide img {
+  margin: 0 auto;
+}
+.slick-track
+{
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+  display: table;
+
+  content: '';
+}
+.slick-track:after
+{
+  clear: both;
+}
+.slick-loading .slick-track
+{
+  visibility: hidden;
+}
+
+.slick-slide
+{
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+  float: right;
+}
+.slick-slide img
+{
+  display: block;
+}
+.slick-slide.slick-loading img
+{
+  display: none;
+}
+.slick-slide.dragging img
+{
+  pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+  display: block;
+}
+.slick-loading .slick-slide
+{
+  visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+  font-size: 0;
+  line-height: 0;
+
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+  opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+
+  opacity: .75;
+  color: #fff;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+  left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+  right: -25px;
+  left: auto;
+}
+.slick-prev:before
+{
+  content: '\2190';
+}
+[dir='rtl'] .slick-prev:before
+{
+  content: '\2192';
+}
+
+.slick-next
+{
+  right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+  right: auto;
+  left: -25px;
+}
+.slick-next:before
+{
+  content: '\2192';
+}
+[dir='rtl'] .slick-next:before
+{
+  content: '\2190';
+}
+
+/* Dots */
+.slick-slider
+{
+  margin-bottom: 30px;
+}
+
+.slick-dots
+{
+  position: absolute;
+  bottom: -45px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+.slick-dots li
+{
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+.slick-dots li button
+{
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+  opacity: 1;
+}
+.slick-dots li button:before
+{
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: '•';
+  text-align: center;
+
+  opacity: .25;
+  color: black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+  opacity: .75;
+  color: black;
+}
+
+/*slick slider end*/
+
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: @screen-xs) {
+  .header {
+    nav {padding: 5% 0 0 0;}
+
+    .tab div {
+
+    }
+  }
+  .portfolio-holder {
+    width: 70%;
+  }
+
+  #ads {
+    display:none;
+  }
+
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .header {
+      .logo {
+
+      }
+        nav { padding: 2% 0 0 0;}
+    .tab div {
+
+    }
+  }
+
+
+  }
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  .header {
+    nav {
+      .logo {
+        font-size: 2em;
+      }
+      .tab div {
+
+      }
+    }
+  }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+  .header {
+    nav {
+      .tab div {
+        height:50px;
+      }
+    }
+  }
+}
+
+
+/* #Clearing */
+
+/* Self Clearing Goodness */
+.portfolio-holder:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}

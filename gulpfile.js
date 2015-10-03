@@ -11,10 +11,11 @@ gulp.task('serve', ['build'], function () {
 
 gulp.task('build', gulpsync.sync(['clean','copy', 'less']));
 
-gulp.task('clean', function () {
-    return gulp.src('./dist/**/*', {read: false})
-        .pipe(clean({force: true}))
-        .pipe(gulp.dest('dist'));
+gulp.task('clean', function (cb) {
+    //return gulp.src('./dist/**/*', {read: false})
+    //    .pipe(clean({force: true}))
+    //    .pipe(gulp.dest('dist'));
+   require('rimraf')('./dist', cb);
 });
 
 gulp.task('less', function () {
